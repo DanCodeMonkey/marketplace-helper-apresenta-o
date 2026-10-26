@@ -51,10 +51,10 @@ ul{padding-left:22px;display:grid;gap:10px}
 .node.main h3,.node.main p{color:#fff}
 .node p{font-size:16px;color:var(--mh-muted);margin-top:4px;line-height:1.35}
 .arrow{font-size:28px;color:var(--mh-muted);flex:none}
-.steps{display:grid;gap:14px;margin-top:24px;counter-reset:s}
-.step{display:flex;gap:18px;align-items:center;background:var(--mh-surface);border:1px solid var(--mh-border);border-radius:var(--mh-radius);padding:14px 22px;box-shadow:var(--shadow)}
+.steps{display:grid;gap:12px;margin-top:22px;counter-reset:s}
+.step{display:flex;gap:18px;align-items:center;background:var(--mh-surface);border:1px solid var(--mh-border);border-radius:var(--mh-radius);padding:12px 22px;box-shadow:var(--shadow)}
 .step b{flex:none;width:34px;height:34px;border-radius:50%;background:var(--mh-primary);color:#fff;display:grid;place-items:center;font-size:16px}
-.step span{font-size:20px}
+.step span{font-size:19px}
 code{font-family:ui-monospace,Consolas,monospace;font-size:.85em;background:var(--mh-primary-soft);border-radius:6px;padding:2px 8px;color:var(--mh-primary)}
 /* tabela */
 table{width:100%;border-collapse:collapse;margin-top:20px;background:var(--mh-surface);border:1px solid var(--mh-border);border-radius:var(--mh-radius);overflow:hidden}
@@ -84,11 +84,11 @@ tr:last-child td{border-bottom:0}
 <section class="slide active">
   <div class="brand"><div class="logo">M</div>Marketplace Helper</div>
   <h1>Marketplace Helper</h1>
-  <p class="lead" style="margin-top:18px">Plataforma de inteligência de rentabilidade para vendedores do Mercado Livre. Ela importa os anúncios pela API oficial, calcula o lucro real de cada item e aponta o que precisa de correção no catálogo.</p>
+  <p class="lead" style="margin-top:18px">Plataforma de inteligência de rentabilidade para vendedores do Mercado Livre. Importa os anúncios pela API oficial, calcula o lucro real de cada item, aponta o que precisa de correção no catálogo e avisa quando o frete cobrado está divergente do real.</p>
   <div class="grid g3" style="margin-top:24px">
-    <div class="card"><div class="kpi" style="font-size:30px">Web</div><div class="klabel">Painel, simulador e calculadora</div></div>
-    <div class="card"><div class="kpi" style="font-size:30px">Mobile</div><div class="klabel">Consulta do vendedor no celular</div></div>
-    <div class="card"><div class="kpi" style="font-size:30px">IoT</div><div class="klabel">Câmera e balança medem e calculam o frete</div></div>
+    <div class="card"><div class="kpi" style="font-size:30px">Web</div><div class="klabel">Painel, simulador e calculadora de frete</div></div>
+    <div class="card"><div class="kpi" style="font-size:30px">Mobile</div><div class="klabel">Consulta e medição no celular</div></div>
+    <div class="card"><div class="kpi" style="font-size:30px">IoT</div><div class="klabel">Câmera e balança medem o produto e o frete sai calculado</div></div>
   </div>
   <div class="people" style="margin-top:24px"><div class="card">Daniel Fernando</div><div class="card">Guilherme Nobrega</div><div class="card">Lucas Peres</div></div>
   <div class="foot"><span>Fatec Votorantim · 4º semestre · Desenvolvimento de Software Multiplataforma</span><span>Projeto Integrador · Grupo [preencher]</span></div>
@@ -114,8 +114,8 @@ tr:last-child td{border-bottom:0}
     <div style="display:grid;gap:12px">
       <div class="card" style="padding:16px 20px"><h3>Importa</h3><p>Todos os anúncios, preços, promoções, comissão e frete reais pela API oficial.</p></div>
       <div class="card" style="padding:16px 20px"><h3>Calcula</h3><p>Lucro e margem por anúncio, com os impostos e custos informados pelo vendedor.</p></div>
-      <div class="card" style="padding:16px 20px"><h3>Aponta</h3><p>Anúncios no prejuízo, margem baixa e itens sem custo, em indicadores clicáveis.</p></div>
-      <div class="card" style="padding:16px 20px"><h3>Mede</h3><p>O IoT pesa e mede o produto sozinho, e o frete sai sem digitação.</p></div>
+      <div class="card" style="padding:16px 20px"><h3>Aponta</h3><p>Anúncios no prejuízo, margem baixa, sem custo e com frete divergente, em indicadores clicáveis.</p></div>
+      <div class="card" style="padding:16px 20px"><h3>Mede</h3><p>O dispositivo pesa e mede o produto; a plataforma calcula o frete real e compara com o cobrado.</p></div>
     </div>
   </div>
 </section>
@@ -123,11 +123,11 @@ tr:last-child td{border-bottom:0}
 <!-- 3. Proposta -->
 <section class="slide">
   <h2>Proposta do projeto</h2>
-  <p class="lead">Importa os anúncios pela API oficial e mostra lucro, margem, comissão e frete de cada item.</p>
+  <p class="lead">Importa os anúncios pela API oficial e mostra lucro, margem, comissão e frete de cada item — em três frentes integradas.</p>
   <div class="grid g3">
-    <div class="card"><h3>Painel de indicadores</h3><p>KPIs clicáveis e insights que apontam o que corrigir no catálogo.</p></div>
-    <div class="card"><h3>Simulador de preço</h3><p>Compara anúncio Clássico e Premium antes de publicar.</p></div>
-    <div class="card"><h3>Dispositivo IoT</h3><p>Câmera e balança medem o produto sozinhas e calculam o frete.</p></div>
+    <div class="card"><h3>Painel de indicadores</h3><p>KPIs clicáveis e insights que apontam o que corrigir no catálogo, inclusive frete divergente.</p></div>
+    <div class="card"><h3>Simulador e calculadora</h3><p>Compara Clássico × Premium antes de publicar e calcula o frete pela cubagem.</p></div>
+    <div class="card"><h3>Dispositivo IoT</h3><p>Câmera e balança medem o produto; o frete real sai sem digitação e já comparado com o cobrado.</p></div>
   </div>
   <div class="foot"><span>Plataforma web + app mobile + IoT</span><span class="pill">Diferencial do projeto integrador</span></div>
 </section>
@@ -155,47 +155,71 @@ tr:last-child td{border-bottom:0}
   <table>
     <tr><th>Componente</th><th>Função</th><th>Dado gerado</th></tr>
     <tr><td><b>Câmera</b></td><td>Detecta o produto e estima as dimensões</td><td>Largura × Altura × Comprimento (cm)</td></tr>
-    <tr><td><b>Balança de celular</b></td><td>Mede a massa do produto</td><td>Peso real (kg)</td></tr>
-    <tr><td><b>Simulação</b></td><td>Gera leituras para testar o fluxo completo</td><td>JSON com medidas e peso</td></tr>
+    <tr><td><b>Balança Bluetooth</b></td><td>Mede a massa do produto</td><td>Peso real (kg)</td></tr>
+    <tr><td><b>Simulação na web</b></td><td>O fluxo completo (medir → salvar → calcular frete) já roda na tela <code>/medir</code></td><td>Medidas por SKU + frete real</td></tr>
   </table>
-  <div class="foot"><span>Hardware em protótipo simulado, conforme o enunciado</span><span class="pill gray">Em desenvolvimento</span></div>
+  <div class="foot"><span>Fluxo medir → frete já funcionando na web; hardware real em desenvolvimento</span><span class="pill ok">Simulação concluída</span></div>
 </section>
 
 <!-- 6. Integração -->
 <section class="slide">
   <h2>Do IoT ao frete calculado</h2>
   <div class="steps">
-    <div class="step"><b>1</b><span>O IoT mede largura, altura, comprimento e peso.</span></div>
-    <div class="step"><b>2</b><span>Envia os dados à API web, por exemplo <code>POST /iot/medidas</code>.</span></div>
-    <div class="step"><b>3</b><span>A API calcula o peso cubado: <code>L × A × C ÷ 6000</code> e adota o maior entre real e cubado.</span></div>
-    <div class="step"><b>4</b><span>Com o preço de venda, consulta a tabela oficial de frete do Mercado Livre.</span></div>
-    <div class="step"><b>5</b><span>O app exibe o custo de frete e o impacto na margem.</span></div>
+    <div class="step"><b>1</b><span>O dispositivo mede largura, altura, comprimento e peso (hoje simulado na tela <code>/medir</code>).</span></div>
+    <div class="step"><b>2</b><span>As medidas são salvas por SKU na API — <code>POST /produtos/medidas</code>.</span></div>
+    <div class="step"><b>3</b><span>A API calcula o peso cubado <code>L × A × C ÷ 6000</code> e adota o maior entre real e cubado.</span></div>
+    <div class="step"><b>4</b><span>Com o preço de venda, consulta a tabela oficial de frete do Mercado Livre → frete real.</span></div>
+    <div class="step"><b>5</b><span>Compara o frete real com o cobrado hoje pelo ML e sinaliza divergências.</span></div>
+    <div class="step"><b>6</b><span>Dashboard, Produtos e a lista de anúncios mostram onde o frete está divergente.</span></div>
   </div>
 </section>
 
-<!-- 7. App -->
+<!-- 7. Frete divergente -->
 <section class="slide">
-  <h2>Telas do app mobile</h2>
-  <p class="lead">Substitua os quadros abaixo por prints reais do app.</p>
+  <h2>Frete divergente: o diferencial</h2>
+  <p class="lead" style="font-size:21px">Com as medidas do produto, a plataforma calcula o frete real pela cubagem e compara com o cobrado hoje pelo Mercado Livre. A diferença revela dimensões mal cadastradas no anúncio.</p>
+  <div class="grid g2" style="margin-top:20px;align-items:start">
+    <table style="margin-top:0">
+      <tr><th>Mesmo produto</th><th style="text-align:right">Frete</th></tr>
+      <tr><td>Cobrado hoje (dimensões declaradas)</td><td style="text-align:right">R$ 10,00</td></tr>
+      <tr><td>Real (medidas + cubagem)</td><td style="text-align:right"><b>R$ 58,75</b></td></tr>
+      <tr><td><b>Divergência</b></td><td style="text-align:right;color:var(--mh-danger)"><b>+ R$ 48,75</b></td></tr>
+    </table>
+    <div style="display:grid;gap:12px">
+      <div class="card" style="padding:16px 20px"><h3>Subdeclarado</h3><p>Frete real acima do cobrado: risco de cobrança extra do Mercado Livre.</p></div>
+      <div class="card" style="padding:16px 20px"><h3>Superdeclarado</h3><p>Frete real abaixo do cobrado: o vendedor paga frete a mais.</p></div>
+      <div class="card" style="padding:16px 20px"><h3>Onde aparece</h3><p>Em Produtos, no Dashboard e como filtro na lista de anúncios.</p></div>
+    </div>
+  </div>
+  <div class="foot"><span>Alerta quando a diferença é de R$ 2 ou mais</span><span class="pill ok">Implementado na web</span></div>
+</section>
+
+<!-- 8. App -->
+<section class="slide">
+  <h2>Telas do app</h2>
+  <p class="lead">Interface responsiva: menu lateral recolhível no desktop e cards no celular. Substitua os quadros abaixo por prints reais.</p>
   <div class="phones">
-    <div class="pcol"><div class="phone"><div class="bar d"></div><div class="blk"></div><div class="blk"></div><div class="blk"></div></div><p>Dashboard<small>KPIs e margem média</small></p></div>
+    <div class="pcol"><div class="phone"><div class="bar d"></div><div class="blk"></div><div class="blk"></div><div class="blk"></div></div><p>Dashboard<small>KPIs clicáveis</small></p></div>
     <div class="pcol"><div class="phone"><div class="bar d"></div><div class="bar"></div><div class="blk"></div><div class="blk"></div></div><p>Anúncios<small>Lucro e saúde</small></p></div>
-    <div class="pcol"><div class="phone"><div class="bar d"></div><div class="blk"></div><div class="bar"></div><div class="bar"></div></div><p>Frete<small>Medidas do IoT</small></p></div>
-    <div class="pcol"><div class="phone"><div class="bar d"></div><div class="blk"></div><div class="blk"></div><div class="bar"></div></div><p>Simulador<small>Clássico × Premium</small></p></div>
+    <div class="pcol"><div class="phone"><div class="bar d"></div><div class="blk"></div><div class="bar"></div><div class="bar"></div></div><p>Medição<small>Câmera + balança</small></p></div>
+    <div class="pcol"><div class="phone"><div class="bar d"></div><div class="blk"></div><div class="blk"></div><div class="bar"></div></div><p>Frete divergente<small>Cobrado × real</small></p></div>
   </div>
 </section>
 
-<!-- 8. API -->
+<!-- 9. API -->
 <section class="slide">
   <h2>API web e regras de negócio</h2>
   <div class="grid g2">
-    <div class="card"><h3>Base técnica</h3><ul><li>Node.js, Express e Prisma ORM</li><li>SQLite, com troca futura para PostgreSQL</li><li>MVC com camada de serviços</li><li>Sincronização com o ML às 00:00 e 12:00</li></ul></div>
+    <div class="card"><h3>Base técnica</h3><ul><li>Node.js, Express e Prisma ORM</li><li>SQLite com migrações versionadas (troca futura para PostgreSQL)</li><li>MVC com camada de serviços</li><li>Interface responsiva (menu lateral, planilha/cards)</li><li>Sincronização com o ML às 00:00 e 12:00</li></ul></div>
     <div class="card"><h3>Segurança</h3><ul><li>Senhas com hash bcrypt</li><li>Tokens do ML cifrados com AES-256-GCM</li><li>Sessão por cookie assinado</li><li>Dados isolados por usuário</li></ul></div>
   </div>
-  <div class="card" style="margin-top:20px;text-align:center"><p style="color:var(--mh-text);font-size:22px">lucro = preço − custo − comissão − frete − impostos</p></div>
+  <div class="card" style="margin-top:18px;text-align:center;padding:16px 24px">
+    <p style="color:var(--mh-text);font-size:20px">lucro = preço − custo − comissão − frete − impostos</p>
+    <p style="color:var(--mh-muted);font-size:17px;margin-top:6px">frete real = tabela ML( maior(peso, L × A × C ÷ 6000), preço )</p>
+  </div>
 </section>
 
-<!-- Integração ML -->
+<!-- 10. Integração ML -->
 <section class="slide">
   <h2>Integração completa com a API do Mercado Livre</h2>
   <p class="lead" style="font-size:20px">Já em funcionamento: OAuth 2.0, renovação automática de token e 10 endpoints consumidos na sincronização.</p>
@@ -215,41 +239,41 @@ tr:last-child td{border-bottom:0}
   <div class="foot" style="padding-top:12px"><span>Tratamos limite de requisições (429) com retry e não repetimos erros definitivos (4xx)</span><span class="pill ok">Em produção na sincronização</span></div>
 </section>
 
-<!-- 9. Implementado -->
+<!-- 11. Implementado -->
 <section class="slide">
   <h2>Funcionalidades implementadas</h2>
   <table>
-    <tr><th>Módulo</th><th style="width:170px">Status</th></tr>
+    <tr><th>Módulo</th><th style="width:190px">Status</th></tr>
     <tr><td>Cadastro, login e sessão</td><td><span class="pill ok">Concluído</span></td></tr>
     <tr><td>OAuth e integração com a API do Mercado Livre</td><td><span class="pill ok">Concluído</span></td></tr>
     <tr><td>Sincronização de anúncios, lucro e margem</td><td><span class="pill ok">Concluído</span></td></tr>
-    <tr><td>Dashboard, insights, produtos por SKU e regras de impostos</td><td><span class="pill ok">Concluído</span></td></tr>
+    <tr><td>Dashboard com KPIs clicáveis, insights, produtos por SKU e regras</td><td><span class="pill ok">Concluído</span></td></tr>
     <tr><td>Calculadora de frete, simulador e exportação Excel</td><td><span class="pill ok">Concluído (web)</span></td></tr>
-    <tr><td>Telas do app mobile</td><td><span class="pill gray">[confirmar]</span></td></tr>
-    <tr><td>Simulação do dispositivo IoT</td><td><span class="pill gray">[confirmar]</span></td></tr>
+    <tr><td>Medição (câmera + balança simuladas) e frete divergente</td><td><span class="pill ok">Concluído (web)</span></td></tr>
+    <tr><td>Interface responsiva: menu lateral e visão planilha/cards</td><td><span class="pill ok">Concluído</span></td></tr>
+    <tr><td>App mobile nativo</td><td><span class="pill gray">[confirmar]</span></td></tr>
   </table>
 </section>
 
-<!-- 10. Pendências -->
+<!-- 12. Pendências -->
 <section class="slide">
   <h2>Etapas pendentes</h2>
   <table>
     <tr><th>Pendência</th><th>Observação</th></tr>
-    <tr><td>Endpoint de recebimento dos dados do IoT</td><td class="muted">Integração IoT → API</td></tr>
-    <tr><td>Detecção de dimensões pela câmera</td><td class="muted">Hoje simulada</td></tr>
-    <tr><td>Leitura da balança</td><td class="muted">Integração com hardware real</td></tr>
-    <tr><td>Finalizar o app mobile e conectar à API</td><td class="muted">[confirmar]</td></tr>
+    <tr><td>Hardware IoT real (câmera + balança física)</td><td class="muted">Hoje simulado na web</td></tr>
+    <tr><td>Endpoint dedicado para o dispositivo enviar leituras</td><td class="muted">Integração hardware → API</td></tr>
+    <tr><td>Finalizar o app mobile nativo e conectar à API</td><td class="muted">[confirmar]</td></tr>
     <tr><td>Recuperação de senha por e-mail</td><td class="muted">Interface pronta, falta provedor</td></tr>
     <tr><td>Hospedagem e migração para PostgreSQL</td><td class="muted">Preparação para produção</td></tr>
     <tr><td><b>Documento parcial em LaTeX</b></td><td><span class="pill warn">Entrega em 02/11</span></td></tr>
   </table>
 </section>
 
-<!-- 11. Encerramento -->
+<!-- 13. Encerramento -->
 <section class="slide">
   <div class="brand"><div class="logo">M</div>Marketplace Helper</div>
   <h1>Obrigado</h1>
-  <p class="lead" style="margin-top:20px">O problema é a margem escondida, a solução é um painel com frete medido automaticamente, e a API e a base web já estão prontas. Falta fechar o app e o IoT.</p>
+  <p class="lead" style="margin-top:20px">O problema é a margem escondida; a solução é um painel que calcula o lucro real e detecta frete divergente automaticamente. A API, a base web e a simulação do fluxo IoT (câmera + balança) já estão prontas — falta o hardware real e fechar o app mobile.</p>
   <div style="margin-top:32px"><span class="btn">Perguntas?</span></div>
   <div class="foot"><span>Daniel Fernando · Guilherme Nobrega · Lucas Peres</span><span>github.com/DanCodeMonkey/marketplace-helper</span></div>
 </section>
@@ -258,7 +282,7 @@ tr:last-child td{border-bottom:0}
 
 <div id="ctrl" aria-label="Navegação">
   <button id="prev" aria-label="Slide anterior">‹</button>
-  <span id="count">1 / 12</span>
+  <span id="count">1 / 13</span>
   <button id="next" aria-label="Próximo slide">›</button>
 </div>
 
